@@ -1,0 +1,198 @@
+/* Basic settings */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #ffd6e7,
+        #e8d7ff
+    );
+
+    font-family: "Georgia", serif;
+    overflow: hidden;
+}
+
+
+/* Postcard */
+.postcard {
+    width: 340px;
+    min-height: 430px;
+
+    background: white;
+    border-radius: 25px;
+
+    padding: 30px;
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+
+    position: relative;
+}
+
+
+/* Title */
+h1 {
+    color: #d94f83;
+    margin-top: 10px;
+}
+
+
+/* Subtitle */
+.subtitle {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* Envelope */
+.envelope {
+    width: 220px;
+    height: 145px;
+
+    background: #f28caf;
+
+    margin: 50px auto 25px;
+
+    position: relative;
+
+    cursor: pointer;
+
+    border-radius: 8px;
+
+    transition: transform 0.3s;
+}
+
+
+/* Envelope hover effect */
+.envelope:hover {
+    transform: scale(1.05);
+}
+
+
+/* Envelope flap */
+.envelope::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    border-left: 110px solid transparent;
+    border-right: 110px solid transparent;
+    border-top: 75px solid #e8759a;
+
+    z-index: 2;
+}
+
+
+/* Heart inside envelope */
+.heart {
+    position: absolute;
+
+    left: 50%;
+    top: 55%;
+
+    transform: translate(-50%, -50%);
+
+    font-size: 42px;
+
+    z-index: 3;
+}
+
+
+/* Message */
+.message {
+    display: none;
+
+    animation: appear 0.8s ease forwards;
+}
+
+
+/* Message heading */
+.message h2 {
+    color: #d94f83;
+}
+
+
+/* Message paragraphs */
+.message p {
+    color: #555;
+    line-height: 1.7;
+}
+
+
+/* Button */
+button {
+    border: none;
+
+    background: #d94f83;
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+
+/* Button hover */
+button:hover {
+    background: #bd3e6d;
+}
+
+
+/* Floating hearts */
+.floating-heart {
+    position: fixed;
+
+    bottom: -30px;
+
+    font-size: 20px;
+
+    animation: float 5s linear infinite;
+
+    pointer-events: none;
+}
+
+
+/* Floating animation */
+@keyframes float {
+
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* Message appearance animation */
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

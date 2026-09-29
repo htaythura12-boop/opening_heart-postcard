@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little Message 💌</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="postcard.css">
+</head>
+
+<body>
+
+    <div class="postcard">
+
+        <!-- Front of postcard -->
+        <div id="front">
+
+            <h1>For You 💌</h1>
+
+            <p class="subtitle">
+                I have a little something to tell you...
+            </p>
+
+            <div class="envelope" onclick="openCard()">
+                <div class="heart">❤️</div>
+            </div>
+
+            <p class="subtitle">
+                Click the envelope ✨
+            </p>
+
+        </div>
+
+
+        <!-- Hidden message -->
+        <div class="message" id="message">
+
+            <h2>Hey, you... 🌷</h2>
+
+            <p>
+                I don't know exactly when it happened,
+                but somehow you became someone
+                I really enjoy thinking about.
+            </p>
+
+            <p>
+                So here's a tiny postcard just to say...
+            </p>
+
+            <h2>I like you. ❤️</h2>
+
+            <p>
+                No pressure. No expectations.
+                I just wanted you to know.
+            </p>
+
+            <button onclick="closeCard()">
+                Close 💕
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Connect JavaScript -->
+    <script src="postcard.js"></script>
+
+</body>
+</html>
